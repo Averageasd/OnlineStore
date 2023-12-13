@@ -1,7 +1,8 @@
--[x] Create 2 routes : home and product
--[x] Make home the root route
--[x] make product route child of home route
--[ ] render product route using Outlet
+-[x] Create 3 routes : root, home and product
+-[x] Make root the root route
+-[x] make product and home routes children of root route
+-[ ] Root route has links to home and product routes
+-[x] render product and home routes using Outlet
 -[ ] Home route has a random image of an item and a button "get started"
 -[ ] Once user clicks on "get started", they will be redirected to product page
 -[ ] Product page has 10-15 items.
