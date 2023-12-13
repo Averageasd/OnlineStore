@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {Home} from "./components/Home.jsx";
-import {Products} from "./components/Products.jsx";
+import {loadStoreItems, Products} from "./components/Products.jsx";
 import App from "./App.jsx";
 
 const router = createBrowserRouter(
@@ -22,6 +22,7 @@ const router = createBrowserRouter(
                 },
                 {
                     path: "/product",
+                    loader:loadStoreItems,
                     element:<Products/>
                 }
             ]
