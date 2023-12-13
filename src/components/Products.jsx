@@ -1,3 +1,4 @@
+import "../App.css";
 export function Products() {
     return (
         <>

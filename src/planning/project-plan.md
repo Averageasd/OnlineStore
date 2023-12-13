@@ -1,9 +1,9 @@
 -[x] Create 3 routes : root, home and product
 -[x] Make root the root route
 -[x] make product and home routes children of root route
--[ ] Root route has links to home and product routes
+-[x] Root route has links to home and product routes
 -[x] render product and home routes using Outlet
--[ ] Home route has a random image of an item and a button "get started"
--[ ] Once user clicks on "get started", they will be redirected to product page
+-[ ] Home route has a random image of an item and a button "shop now"
+-[x] Once user clicks on "shop now", they will be redirected to product page
 -[ ] Product page has 10-15 items.
--[ ] Each item has an image and price that is position below the image.
+-[ ] Each item has an image and price that is positioned below the image.

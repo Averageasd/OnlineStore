@@ -2,15 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {Root} from "./components/Root.jsx";
 import {Home} from "./components/Home.jsx";
 import {Products} from "./components/Products.jsx";
+import App from "./App.jsx";
 
 const router = createBrowserRouter(
     [
         {
             path: "/",
-            element: <Root/>,
+            element: <App/>,
             children: [
                 {
                     index: true,
@@ -22,7 +22,7 @@ const router = createBrowserRouter(
                 },
                 {
                     path: "/product",
-                    element: <Products/>
+                    element:<Products/>
                 }
             ]
         },
