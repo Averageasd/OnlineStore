@@ -6,5 +6,5 @@
 -[ ] Home route has a random image of an item and a button "shop now"
 -[x] Once user clicks on "shop now", they will be redirected to product page
 -[x] fetch data from FakeStoreAPI.
--[ ] Product page has 10-15 items.
--[ ] Each item has an image and price that is positioned below the image.
+-[x] Product page has 10-15 items.
+-[x] Each item has an image and price that is positioned below the image.
