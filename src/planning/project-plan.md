@@ -8,4 +8,4 @@
 -[x] fetch data from FakeStoreAPI.
 -[x] Product page has 10-15 items.
 -[x] Each item has an image, and "add to cart" button and price that are positioned below the image.
--[ ] Create 1 more route called "cart"
+-[x] Create 1 more route called "cart"
