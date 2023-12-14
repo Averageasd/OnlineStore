@@ -26,6 +26,7 @@ export function Products() {
                                 </div>
                                 <p className="item-title">Item title</p>
                                 <p className="item-price">$150</p>
+                                <button>add to cart</button>
                             </li>
                         )
                     })
