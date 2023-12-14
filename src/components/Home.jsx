@@ -1,7 +1,7 @@
 import "../App.css";
 import {Link} from "react-router-dom";
 
-export function Home() {
+export function Home(props) {
     return (
         <>
             <h1>Home</h1>

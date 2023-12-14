@@ -1,8 +1,8 @@
 import './App.css'
 import {Link, Outlet} from "react-router-dom";
+import {useState} from "react";
 
-function App() {
-    console.log("print from root");
+function App(props) {
     return (
         <>
             <ul>
@@ -13,11 +13,9 @@ function App() {
                     <Link to="/product">Shop</Link>
                 </li>
                 <li>
-                    <Link to="/cart">Cart</Link>
+                    <Link to="/cart">Cart({props.cart.length})</Link>
                 </li>
             </ul>
-
-
             <Outlet></Outlet>
         </>
     )

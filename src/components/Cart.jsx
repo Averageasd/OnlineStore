@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export function Cart() {
+export function Cart(props) {
     const [itemCount, setItemCount] = useState(0);
 
     function setCount(){

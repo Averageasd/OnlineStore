@@ -1,5 +1,5 @@
 import "../App.css";
-import {useLoaderData} from "react-router-dom";
+import {useLoaderData, useLocation} from "react-router-dom";
 
 export async function loadStoreItems() {
     const storeResponse = await fetch('https://fakestoreapi.com/products');
@@ -10,8 +10,11 @@ export async function loadStoreItems() {
     return data;
 }
 
-export function Products() {
+export function Products(props) {
     const storeData = useLoaderData();
+    const {state} = useLocation();
+    console.log(state);
+
     return (
         <>
             <h1>Product</h1>
@@ -23,6 +26,7 @@ export function Products() {
                                 <img className="item-img" src={item.image} alt="item"/>
                                 <p className="item-title">{item.title}</p>
                                 <p className="item-price">{item.price}</p>
+                                <p className="item-quantity">{item.qty ? item.qty : '0'}</p>
                                 <button>add to cart</button>
                             </li>
                         )
