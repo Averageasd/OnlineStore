@@ -7,7 +7,6 @@ import {useState} from "react";
 
 export function Router() {
     const [cart, setCart] = useState([]);
-    const [items, setItems] = useState([]);
     const router = createBrowserRouter(
         [
             {
@@ -25,11 +24,11 @@ export function Router() {
                     {
                         path: "/product",
                         loader: loadStoreItems,
-                        element: <Products items = {items} setItems= {setItems} cart = {cart} setCart = {setCart}/>
+                        element: <Products cart = {cart} setCart = {setCart}/>
                     },
                     {
                         path: "/cart",
-                        element: <Cart items = {items} setItems = {setItems} cart = {cart} setCart = {setCart}/>,
+                        element: <Cart cart = {cart} setCart = {setCart}/>,
                     }
                 ]
             },

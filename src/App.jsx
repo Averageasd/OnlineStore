@@ -1,8 +1,16 @@
 import './App.css'
 import {Link, Outlet} from "react-router-dom";
-import {useState} from "react";
 
-function App(props) {
+function App({cart}) {
+    function countCartItems(cart){
+        let counter = 0;
+        for (const item of cart){
+            counter += item.qty;
+        }
+        return counter;
+    }
+
+    const cartItemCount = countCartItems(cart);
     return (
         <>
             <ul>
@@ -13,7 +21,7 @@ function App(props) {
                     <Link to="/product">Shop</Link>
                 </li>
                 <li>
-                    <Link to="/cart">Cart({props.cart.length})</Link>
+                    <Link to="/cart">Cart({cartItemCount})</Link>
                 </li>
             </ul>
             <Outlet></Outlet>

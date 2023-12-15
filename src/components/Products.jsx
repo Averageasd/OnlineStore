@@ -1,5 +1,5 @@
 import "../App.css";
-import {useLoaderData, useLocation} from "react-router-dom";
+import {useLoaderData} from "react-router-dom";
 
 export async function loadStoreItems() {
     const storeResponse = await fetch('https://fakestoreapi.com/products');
@@ -10,10 +10,17 @@ export async function loadStoreItems() {
     return data;
 }
 
-export function Products(props) {
+export function Products({cart, setCart}) {
     const storeData = useLoaderData();
-    const {state} = useLocation();
-    console.log(state);
+
+    function addItemToCart(id) {
+        const updatedCart = [...cart];
+        const isItemInCart = cart.some(item => item.id === id);
+        if (!isItemInCart) {
+            updatedCart.push({...storeData.find(item => item.id === id), qty: 1});
+            setCart(updatedCart);
+        }
+    }
 
     return (
         <>
@@ -25,9 +32,10 @@ export function Products(props) {
                             <li className="item" key={item.id}>
                                 <img className="item-img" src={item.image} alt="item"/>
                                 <p className="item-title">{item.title}</p>
-                                <p className="item-price">{item.price}</p>
-                                <p className="item-quantity">{item.qty ? item.qty : '0'}</p>
-                                <button>add to cart</button>
+                                <p className="item-price">{item.price.toFixed(2)}</p>
+                                {cart.some(cartItem => cartItem.id === item.id) ?
+                                    <button onClick={() => addItemToCart(item.id)}>remove from cart</button> :
+                                    <button onClick={() => addItemToCart(item.id)}>add to cart</button>}
                             </li>
                         )
                     })
