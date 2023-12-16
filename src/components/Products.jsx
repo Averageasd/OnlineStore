@@ -22,6 +22,10 @@ export function Products({cart, setCart}) {
         }
     }
 
+    function removeItemFromCart(id){
+        setCart(cart.filter(item => item.id !==id));
+    }
+
     return (
         <>
             <h1>Product</h1>
@@ -34,8 +38,8 @@ export function Products({cart, setCart}) {
                                 <p className="item-title">{item.title}</p>
                                 <p className="item-price">{item.price.toFixed(2)}</p>
                                 {cart.some(cartItem => cartItem.id === item.id) ?
-                                    <button onClick={() => addItemToCart(item.id)}>remove from cart</button> :
-                                    <button onClick={() => addItemToCart(item.id)}>add to cart</button>}
+                                    <button className="add-item-btn" onClick={() => removeItemFromCart(item.id)}>remove from cart</button> :
+                                    <button className="add-item-btn" onClick={() => addItemToCart(item.id)}>add to cart</button>}
                             </li>
                         )
                     })

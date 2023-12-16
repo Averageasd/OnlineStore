@@ -2,6 +2,10 @@
     max-width: 1280px;
     padding: 2rem;
     margin: 0 auto;
+    --primary-background-color: #242424;
+    --primary-color: rgba(255, 255, 255, 0.87);
+    color: #213547;
+    background-color: #ffffff;
 }
 
 * {
@@ -10,43 +14,6 @@
     padding: 0;
 }
 
-.logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-}
-
-.logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    a:nth-of-type(2) .logo {
-        animation: logo-spin infinite 20s linear;
-    }
-}
-
-.card {
-    padding: 2em;
-}
-
-.read-the-docs {
-    color: #888;
-}
 
 ul {
     list-style: none;
@@ -55,9 +22,20 @@ ul {
 
 .item {
     border-radius: 5px;
-    padding: 0;
+    padding: 1.5em;
     margin: 2em auto;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+button {
+    background-color: var(--primary-background-color);
+    color: var(--primary-color);
+    display: block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 auto;
 }
 
 
@@ -123,6 +101,25 @@ ul {
 }
 
 .add-item-btn {
-    background-color: #242424;
-    color: rgba(255, 255, 255, 0.87);
+    padding: 0.5em 2em;
+    min-width: 150px;
+    cursor: pointer;
+}
+
+.divider {
+    margin-top: 2em;
+}
+
+.total {
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 0.75em;
+}
+
+.clear-cart-btn, .checkout-btn{
+    width: min(90%,576px);
+    font-size: 1rem;
+    padding: 0.5em;
+    margin-top: 2em;
 }

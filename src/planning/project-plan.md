@@ -10,5 +10,9 @@
 -[x] Each item has an image, and "add to cart" button and price that are positioned below the image.
 -[x] Create 1 more route called "cart"
 -[x] create a fake cart object that contains list of items user adds.
--[ ] Cart state is shared between routes.
--[ ] Each item in cart has quantity.
+-[x] Cart state is shared between routes.
+-[x] Each item in cart has quantity.
+-[x] add increment and decrement buttons to modify the quantity attribute of each item.
+-[x] Once an item quantity is 0, it will be removed from cart.
+-[x] Add button to clear cart
+-[ ] Add a fake payment process modal
