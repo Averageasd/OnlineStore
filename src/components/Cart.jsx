@@ -1,5 +1,23 @@
+import {useEffect, useState} from "react";
+
 export function Cart({cart, setCart}) {
 
+    const [showPaymentModal, setShowPaymentModal] = useState(false);
+
+    useEffect(() => {
+        let timeOut = setTimeout(function(){
+            setShowPaymentModal(false);
+        },2000);
+        return () => {
+            clearTimeout(timeOut);
+        };
+    }, [showPaymentModal]);
+
+
+    if (showPaymentModal){
+        return <div>payment</div>
+    }
+    
     function increaseItemQty(id) {
         setCart(cart.map((item) => {
             if (item.id === id) {
@@ -41,8 +59,12 @@ export function Cart({cart, setCart}) {
         return price;
     }
 
-    function clearCart(cart){
+    function clearCart(){
         setCart([]);
+    }
+
+    function checkout(){
+        setShowPaymentModal(true);
     }
 
     const total = getItemPrice(cart);
@@ -69,7 +91,7 @@ export function Cart({cart, setCart}) {
             </ul>
             <hr className="divider"/>
             <p className="total">Total : ${total.toFixed(2)}</p>
-            <button className="checkout-btn">Check out</button>
+            <button className="checkout-btn" onClick={checkout}>Check out</button>
             <button className="clear-cart-btn" onClick={clearCart}>Clear</button>
         </>
     )
