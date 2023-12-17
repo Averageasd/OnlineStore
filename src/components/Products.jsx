@@ -27,9 +27,9 @@ export function Products({cart, setCart}) {
     }
 
     return (
-        <>
-            <h1>Product</h1>
-            <ul>
+        <section className="product-section">
+            <h2 className="section-title product-section-title">Product</h2>
+            <ul className="products">
                 {
                     storeData.map((item) => {
                         return (
@@ -45,6 +45,6 @@ export function Products({cart, setCart}) {
                     })
                 }
             </ul>
-        </>
+        </section>
     )
 }

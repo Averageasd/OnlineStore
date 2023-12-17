@@ -3,7 +3,7 @@
 -[x] make product and home routes children of root route
 -[x] Root route has links to home and product routes
 -[x] render product and home routes using Outlet
--[ ] Home route has a random image of an item and a button "shop now"
+-[x] Home route has a random image of an item and a button "shop now"
 -[x] Once user clicks on "shop now", they will be redirected to product page
 -[x] fetch data from FakeStoreAPI.
 -[x] Product page has 10-15 items.
@@ -15,4 +15,7 @@
 -[x] add increment and decrement buttons to modify the quantity attribute of each item.
 -[x] Once an item quantity is 0, it will be removed from cart.
 -[x] Add button to clear cart
--[ ] Add a fake payment process modal
+-[x] Add a fake payment process modal
+-[x] Create nav bar for links
+-[x] Make the website responsive on all devices. 
+-[ ] Create custom hooks for all crud operations in the app
