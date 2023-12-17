@@ -1,4 +1,4 @@
-import "../App.css";
+import "../../App.css";
 import {useLoaderData} from "react-router-dom";
 import {ProductList} from "./ProductList.jsx";
 

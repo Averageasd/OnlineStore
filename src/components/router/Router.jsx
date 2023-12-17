@@ -1,8 +1,8 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import App from "../App.jsx";
-import {Home} from "./Home.jsx";
-import {loadStoreItems, Products} from "./Products.jsx";
-import {Cart} from "./Cart.jsx";
+import App from "../../App.jsx";
+import {Home} from "../home/Home.jsx";
+import {loadStoreItems, Products} from "../shop/Products.jsx";
+import {Cart} from "../cart/Cart.jsx";
 import {useState} from "react";
 
 export function Router() {

@@ -1,5 +1,5 @@
-import "../App.css";
-import heroImg from "../assets/home-shopping.jpg";
+import "../../App.css";
+import heroImg from "../../assets/home-shopping.jpg";
 import {Hero} from "./Hero.jsx";
 
 export function Home() {
