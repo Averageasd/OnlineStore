@@ -18,4 +18,4 @@
 -[x] Add a fake payment process modal
 -[x] Create nav bar for links
 -[x] Make the website responsive on all devices. 
--[ ] Create custom hooks for all crud operations in the app
+-[x] Clean up code by creating reusable components.

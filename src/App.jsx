@@ -1,5 +1,6 @@
 import './App.css'
-import {Link, Outlet} from "react-router-dom";
+import {Outlet} from "react-router-dom";
+import {Nav} from "./components/Nav.jsx";
 
 function App({cart}) {
     function countCartItems(cart) {
@@ -13,22 +14,7 @@ function App({cart}) {
     const cartItemCount = countCartItems(cart);
     return (
         <>
-            <header>
-                <nav className="nav">
-                    <ul className="link-container">
-                        <li>
-                            <Link to="/home">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/product">Shop</Link>
-                        </li>
-                        <li>
-                            <Link to="/cart">Cart({cartItemCount})</Link>
-                        </li>
-                    </ul>
-                </nav>
-
-            </header>
+            <Nav cartItemCount={cartItemCount}></Nav>
             <Outlet></Outlet>
         </>
     )

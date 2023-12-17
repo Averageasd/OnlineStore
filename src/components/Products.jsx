@@ -1,5 +1,6 @@
 import "../App.css";
 import {useLoaderData} from "react-router-dom";
+import {ProductList} from "./ProductList.jsx";
 
 export async function loadStoreItems() {
     const storeResponse = await fetch('https://fakestoreapi.com/products');
@@ -22,29 +23,19 @@ export function Products({cart, setCart}) {
         }
     }
 
-    function removeItemFromCart(id){
-        setCart(cart.filter(item => item.id !==id));
+    function removeItemFromCart(id) {
+        setCart(cart.filter(item => item.id !== id));
     }
 
     return (
         <section className="product-section">
             <h2 className="section-title product-section-title">Product</h2>
-            <ul className="products">
-                {
-                    storeData.map((item) => {
-                        return (
-                            <li className="item" key={item.id}>
-                                <img className="item-img" src={item.image} alt="item"/>
-                                <p className="item-title">{item.title}</p>
-                                <p className="item-price">{item.price.toFixed(2)}</p>
-                                {cart.some(cartItem => cartItem.id === item.id) ?
-                                    <button className="add-item-btn" onClick={() => removeItemFromCart(item.id)}>remove from cart</button> :
-                                    <button className="add-item-btn" onClick={() => addItemToCart(item.id)}>add to cart</button>}
-                            </li>
-                        )
-                    })
-                }
-            </ul>
+            <ProductList
+                cart={cart}
+                storeData={storeData}
+                removeItemFromCart={removeItemFromCart}
+                addItemToCart={addItemToCart}
+            />
         </section>
     )
 }
