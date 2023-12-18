@@ -18,7 +18,7 @@ export function CartEditAction(
                 <button className="minus-qty" onClick={() => decreaseItemQty(item.id)}><span
                     className="minus-symbol">-</span></button>
             </div>
-            <p className="cart-item-price">${getPriceWithQty(item.id)}</p>
+            <p className="cart-item-price">${getPriceWithQty(item.id).toFixed(2)}</p>
         </div>
     )
 }

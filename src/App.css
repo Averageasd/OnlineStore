@@ -280,10 +280,19 @@ button {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
     }
+
 
     .cart-item * {
         margin: 0;
+    }
+
+    .cart-item-edit {
+        justify-content: flex-end;
+    }
+
+    .cart-item-price {
+        margin-top: 0.5em;
+        text-align: right;
     }
 }
